@@ -19,10 +19,37 @@
     background-color: var(--primary-color);
 }
 
+.btn.add:hover {
+    background-color: #cab320;
+}
+
+.btn.add:active {
+    background-color: #ad9a1c;
+}
+
 .btn.remove {
     background-color: tomato;
 }
 
+.btn.remove:hover {
+    background-color: rgb(209, 83, 61);
+}
+
+.btn.remove:active {
+    background-color: rgb(185, 73, 54);
+}
+
 .btn.checkout {
     background-color: #47bb77c6;
+    width: 150px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn.checkout:hover {
+    background-color: #47bb78;
+}
+
+.btn.checkout:active {
+    background-color: rgb(30, 93, 41s);
 }
