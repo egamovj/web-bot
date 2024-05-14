@@ -1,5 +1,8 @@
 # React + Vite
 
+<h2>This is a Web telegram bot project from sammi.ac platform</h2>
+<h3>Clone this repository to use this project</h3>
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
