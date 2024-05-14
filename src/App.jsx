@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { getData } from './constants/db';
 import "./App.css";
+import Card from './components/card/card';
 
 const courses = getData()
 
@@ -12,7 +13,7 @@ const App = () => {
       <div className="cards__container">
         {courses.map((course)=> (
           <>
-            <h1>{course.title}</h1>
+            <Card key={course.id}  course={course}/>
           </>
         ))}
       </div>
