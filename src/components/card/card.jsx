@@ -14,6 +14,7 @@ const Card = (props) => {
           height={"230px"}
         />
       </div>
+
       <div className="card__body">
         <h2 className="card__title">{course.title}</h2>
         <div className="card__price">
@@ -22,6 +23,13 @@ const Card = (props) => {
             currency: "USD",
           })}
         </div>
+      </div>
+
+      <div className="hr"></div>
+
+      <div className="btn__container">
+        <button>+</button>
+        <button>-</button>
       </div>
     </div>
   );
