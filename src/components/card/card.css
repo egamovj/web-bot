@@ -23,4 +23,22 @@
     justify-content: center;
     align-items: center;
     transform: translate(20px, -20px) scale(1);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: bold;
+    animation: scaleanimation 1s ease infinite;
+    color: #fff;
+}
+
+@keyframes scaleanimation {
+    to {
+        transform: translate(20px, -20px) scale(1.05);
+        opacity: 1;
+    }
+}
+
+.image__container img {
+    width: 100%;
+    object-fit: cover;
 }
