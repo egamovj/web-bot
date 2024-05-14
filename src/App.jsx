@@ -1,12 +1,23 @@
+/* eslint-disable no-unused-vars */
+import { getData } from './constants/db';
+import "./App.css";
 
-import './App.css'
+const courses = getData()
 
 const App = () => {
   return (
-    <div>
-      App
-    </div>
-  )
-}
+    <>
+      <h1>Course</h1>
+      {/* Card */}
+      <div className="cards__container">
+        {courses.map((course)=> (
+          <>
+            <h1>{course.title}</h1>
+          </>
+        ))}
+      </div>
+    </>
+  );
+};
 
-export default App
+export default App;
