@@ -1,14 +1,23 @@
 /* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
 import { getData } from "./constants/db";
 import Card from "./components/card/card";
-import "./App.css";
 import Cart from "./components/cart/cart";
-import { useState } from "react";
+import "./App.css";
 
 const courses = getData();
 
+
+const telegram = window.Telegram.WebApp
+
+
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    telegram.ready()
+  }, [])
+  
 
   const onAddItem = (item) => {
     const existItem = cartItems.find((c) => c.id == item.id);
@@ -40,10 +49,15 @@ const App = () => {
     }
   };
 
+  const onCheckout = () => {
+    telegram.MainButton.text = "Sotib olish :)"
+    telegram.MainButton.show()
+  }
+
   return (
     <>
       <h1 className="heading">Course</h1>
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} onCheckout={onCheckout} />
       {/* Card */}
       <div className="cards__container">
         {courses.map((course) => (

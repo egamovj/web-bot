@@ -3,7 +3,7 @@ import Button from "../button/button";
 import "./cart.css";
 import { totalPrice } from "../../utils/total-price";
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, onCheckout }) => {
   return (
     <div className="cart__container">
       <p>
@@ -20,6 +20,7 @@ const Cart = ({ cartItems }) => {
         }`}
         disable={cartItems.length === 0 ? true : false}
         type={"checkout"}
+        onClick={onCheckout}
       />
     </div>
   );
