@@ -1,7 +1,7 @@
 # React + Vite
 
 <h2>This is a Web telegram bot project from sammi.ac platform</h2>
-
+<h3>Clone this repository to use this project</h3>
 
 Currently, two official plugins are available:
 
