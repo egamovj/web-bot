@@ -43,7 +43,7 @@ const App = () => {
   return (
     <>
       <h1 className="heading">Course</h1>
-      <Cart />
+      <Cart cartItems={cartItems} />
       {/* Card */}
       <div className="cards__container">
         {courses.map((course) => (

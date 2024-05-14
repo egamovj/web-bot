@@ -53,3 +53,8 @@
 .btn.checkout:active {
     background-color: rgb(30, 93, 41s);
 }
+
+.btn.disabled {
+    pointer-events: none;
+    opacity: 0.3;
+}

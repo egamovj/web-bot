@@ -1,13 +1,26 @@
 import React from "react";
 import Button from "../button/button";
 import "./cart.css";
+import { totalPrice } from "../../utils/total-price";
 
-const Cart = () => {
+const Cart = ({ cartItems }) => {
   return (
     <div className="cart__container">
-      <p>Umumiy narx: $12.00</p>
+      <p>
+        Umumiy narx:{" "}
+        {totalPrice(cartItems).toLocaleString("en-US", {
+          style: "currency",
+          currency: "USD",
+        })}
+      </p>
 
-      <Button title={'Buyurtma'} type={'checkout'} />
+      <Button
+        title={`${
+          cartItems.length === 0 ? "Buyurtma berish" : "To'lov qilish"
+        }`}
+        disable={cartItems.length === 0 ? true : false}
+        type={"checkout"}
+      />
     </div>
   );
 };
