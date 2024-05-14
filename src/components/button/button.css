@@ -1,0 +1,28 @@
+:root {
+    --primary-color: #e0c521;
+}
+
+.btn {
+    padding: 1rem 0.8rem;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 120px;
+    box-shadow: 1px -3px 52px -5px rgba(0, 0, 0, 0.77);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn.add {
+    background-color: var(--primary-color);
+}
+
+.btn.remove {
+    background-color: tomato;
+}
+
+.btn.checkout {
+    background-color: #47bb77c6;
+}
